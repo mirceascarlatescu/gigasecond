@@ -1,4 +1,4 @@
-use time::{PrimitiveDateTime as DateTime, ext::NumericalDuration};
+use time::{PrimitiveDateTime as DateTime, Duration};
 use time_macros::{date, time};
 
 fn main() {
@@ -7,5 +7,5 @@ fn main() {
     println!("My date {}, and after {}",my_date.to_string(), after_my_date.to_string());
 }
 fn after(start: DateTime) -> DateTime {
-    start + 1000_000_000.seconds()
+    start + Duration::seconds(1000_000_000)
 }
